@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.css';
+import { ConfigProvider } from 'antd';
+import enUS from 'antd/es/locale/en_US';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import './styles/index.css';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ConfigProvider locale={enUS}>
+        <App />
+      </ConfigProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
