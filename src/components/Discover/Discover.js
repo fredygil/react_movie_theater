@@ -49,7 +49,7 @@ class Discover extends Component {
         <Movies
           title={
             <div>
-              <FireOutlined style={{ color: 'red' }} /> Popular Movies
+              <FireOutlined style={{ color: '#FAA195' }} /> Popular Movies
             </div>
           }
           data={this.state.movies}

@@ -8,13 +8,17 @@ const Movie = (props) => {
   return (
     <Card
       hoverable
-      style={{ width: 240 }}
+      bordered={false}
+      headStyle={{ width: '100%', height: 'auto' }}
+      bodyStyle={{
+        padding: 0,
+        marginTop: 8,
+        marginBottom: 8,
+      }}
       cover={
         <img alt={props.title + ' poster'} src={imageURL(props.poster_path)} />
       }
-    >
-      <Meta title={props.title} />
-    </Card>
+    ></Card>
   );
 };
 

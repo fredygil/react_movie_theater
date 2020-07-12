@@ -4,12 +4,16 @@ import { Col, Row, Card } from 'antd';
 
 const Movies = (props) => {
   return (
-    <Card title={props.title} bordered={false}>
+    <Card
+      title={props.title}
+      bordered={false}
+      headStyle={{ fontSize: '1.3vw', fontWeight: 'bold' }}
+    >
       <Row gutter={16}>
         {props.data &&
           props.data.map((movie) => {
             return (
-              <Col span={8} key={movie.id}>
+              <Col span={6} key={movie.id}>
                 <Movie {...movie}></Movie>
               </Col>
             );
