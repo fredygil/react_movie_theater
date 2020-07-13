@@ -17,3 +17,10 @@
   font-weight: bold;
   color: red;
 }
+
+.search-box {
+  position: relative;
+  margin: 0 auto;
+  bottom: 100px;
+  width: 50%;
+}
