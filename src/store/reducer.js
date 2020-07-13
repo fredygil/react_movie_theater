@@ -1,10 +1,11 @@
-import { REQUEST_MOVIES, RECEIVE_MOVIES } from './actions';
+import { REQUEST_MOVIES, RECEIVE_MOVIES, SET_RATE_FILTER } from './actions';
 
 const initialState = {
   isFetching: false,
   didInvalidate: false,
   error: false,
   origin: 'discover',
+  rate: 0,
 };
 
 function movies(state = initialState, action) {
@@ -24,6 +25,12 @@ function movies(state = initialState, action) {
         lastUpdated: action.receivedAt,
         origin: action.origin,
       };
+    case SET_RATE_FILTER:
+      return {
+        ...state,
+        rate: action.rate,
+      };
+
     default:
       return state;
   }

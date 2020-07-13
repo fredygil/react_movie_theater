@@ -1,11 +1,12 @@
 import fetch from 'cross-fetch';
 import queryString from 'query-string';
-import strictUriEncode from 'strict-uri-encode';
 import { defaultParams, defaultHeaders } from '../lib/defaults';
 
 export const REQUEST_MOVIES = 'FETCH_MOVIES';
 export const RECEIVE_MOVIES = 'RECEIVE_MOVIES';
 export const SEARCH_MOVIES = 'SEARCH_MOVIES';
+export const SET_RATE_FILTER = 'SET_RATE_FILTER';
+export const RESET_RATE_FILTER = 'RESET_RATE_FILTER';
 
 export const requestMovies = () => {
   return {
@@ -103,13 +104,21 @@ export function fetchMoviesFromSearch(searchText) {
     })
       .then((response) => response.json())
       .then((json) => {
+        dispatch(setRateFilter(0));
         //if empty then return Discover
-        console.log(json);
         if (json && json.results && json.results.length > 0) {
           dispatch(receiveMovies(json, 'search'));
         } else {
           dispatch(fetchMovies());
         }
       });
+  };
+}
+
+// Filter by rate
+export function setRateFilter(value) {
+  return {
+    type: SET_RATE_FILTER,
+    rate: value,
   };
 }

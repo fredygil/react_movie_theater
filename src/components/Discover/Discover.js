@@ -40,9 +40,15 @@ class Discover extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { isFetching, lastUpdated, movies, origin } = state;
+  const { isFetching, lastUpdated, movies, origin, rate } = state;
+
   return {
-    movies: movies || [],
+    movies:
+      (movies &&
+        movies.filter(
+          (movie) => rate === 0 || movie.vote_average >= (rate - 1) * 2
+        )) ||
+      [],
     isFetching,
     lastUpdated,
     origin,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchMovies, fetchMoviesFromSearch } from '../../store/actions';
+import { fetchMoviesFromSearch } from '../../store/actions';
 import { Input } from 'antd';
 
 const Search = (props) => {

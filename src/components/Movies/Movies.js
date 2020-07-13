@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Movie from './Movie';
-import { Col, Row, Card } from 'antd';
+import { Col, Row, Card, Empty } from 'antd';
+import RateFilter from '../Filters/Rate';
 
 const Movies = (props) => {
   return (
@@ -8,6 +9,11 @@ const Movies = (props) => {
       title={props.title}
       bordered={false}
       headStyle={{ fontSize: '1.3vw', fontWeight: 'bold' }}
+      extra={
+        <span>
+          Rating: <RateFilter></RateFilter>
+        </span>
+      }
     >
       <Row gutter={16}>
         {props.data &&
