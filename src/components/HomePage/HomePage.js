@@ -14,6 +14,9 @@ const HomePage = (props) => {
             <Col span={24}>
               {' '}
               <img src={poster} className="responsive-image" alt="Poster" />
+              <div className="head-title">
+                Welcome! Find movies by your local teather
+              </div>{' '}
               <Search></Search>
             </Col>
             <Col span={2}></Col>

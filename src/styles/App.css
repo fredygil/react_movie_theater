@@ -12,6 +12,17 @@
   height: auto;
 }
 
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
+.responsive-image-70 {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+
 .movies {
   font-size: 2vh;
   font-weight: bold;
@@ -21,6 +32,17 @@
 .search-box {
   position: relative;
   margin: 0 auto;
-  bottom: 100px;
+  bottom: 150px;
   width: 50%;
+}
+
+.head-title {
+  position: relative;
+  font-size: 1.5vw;
+  margin: 0 auto;
+  bottom: 200px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
 }
