@@ -4,6 +4,7 @@ const initialState = {
   isFetching: false,
   didInvalidate: false,
   error: false,
+  origin: 'discover',
 };
 
 function movies(state = initialState, action) {
@@ -21,6 +22,7 @@ function movies(state = initialState, action) {
         didInvalidate: false,
         movies: action.movies,
         lastUpdated: action.receivedAt,
+        origin: action.origin,
       };
     default:
       return state;
