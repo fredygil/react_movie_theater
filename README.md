@@ -1,6 +1,6 @@
 # Local Movie Theater
 
-App developed by Fredy Gil for Rockstar Coders.
+Movie Theather example using [The Movie Database API](https://api.themoviedb.org/3).
 
 ## About the app
 
